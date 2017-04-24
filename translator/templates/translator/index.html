@@ -1,0 +1,15 @@
+{% extends 'translator/base.html' %}
+
+{% block body %}
+
+    <form action="/translator/" method="post">
+        {% csrf_token %}
+        <div class="input_form"> {{ form }} </div>
+        <input class="btn-secondary" type="submit" value="Käännä kontiksi" />
+    </form>
+
+    <div>
+        <div class="output_area" >{{ output_text }}</div>
+    </div>
+
+{% endblock %}
